@@ -1,0 +1,87 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+.container
+{
+    background-color: blue;
+    height: 1700px;
+    /* width: 900px; */
+    display: grid;
+    /* It is block grid. */
+
+    /* But, if  we want to use a grid as an inline element of our design, then we can use inline-grid. Inline elements can be put together in a line, whereas block elements cannot.*/
+
+    /* grid-template-rows: 80px 80px 80px 80px;
+    grid-template-columns:  80px 80px 80px 80px;
+     */
+
+    grid-template-rows: 180px repeat(2, 1fr) 180px;
+    grid-template-columns: 180px repeat(2, 1fr) 180px;
+    column-gap: 10px;
+    row-gap: 10px;
+    border: 10px solid blue;
+    justify-items: start;
+    align-items: end;
+
+    place-items: center;
+}
+
+.item
+{
+    background-color: aquamarine;
+    height: 180px; 
+    width: 180px;
+    
+}
+
+img
+{
+    height: 140px;
+    width: 170px;
+}
+
+.item1
+{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: black;
+    color: white;
+}
+
+/* .item3
+{
+    /* align-self: start;
+    justify-self: center;
+     */
+    /* place-self: center; }*/
+
+.footer
+{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    background-color: black;
+    color: white;
+}
+
+.column1
+{
+    /* grid-row-start: 2;
+    grid-row-end: 5;
+    */
+    grid-row: 2/ span 3;
+    background-color: black;
+    color: white;
+}
+
+.column2
+{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background-color: black;
+    color: white;
+}
